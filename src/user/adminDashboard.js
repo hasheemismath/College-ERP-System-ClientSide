@@ -41,6 +41,7 @@ const AdminDashBoard = () => {
                 <div className="col-3">{adminLeftSide()}</div>
                 <div className="col-9">{adminRightSide()}</div>
             </div>
+            <text>Tsting</text>
         </div>
     );
 };
