@@ -18,6 +18,7 @@ const AdminDashBoard = () => {
     const adminRightSide = () => {
         return (
             <div className="card mb-4">
+                <text> fsdfdsfds</text>
                 <h4 className="card-header">Admin Information</h4>
                 <ul className="list-group">
                     <li className="list-group-item">
