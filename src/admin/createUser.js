@@ -4,6 +4,7 @@ import NavbarCon from "../component/navbarCon";
 import {toast, ToastContainer} from "react-toastify";
 import {createuser} from "./helper/adminpicell";
 import Spinner from "../common/Spinner";
+import FormFields from "../common/formFields";
 
 
 
@@ -23,6 +24,7 @@ const CreateUser=()=>  {
 
     const handleChange = name => event => {
         setValues({ ...values, error: "", [name]: event.target.value });
+        // console.log(name)
     };
 
     const newUser = {
@@ -91,22 +93,36 @@ const CreateUser=()=>  {
                 <div className="form-row">
                     <div className="form-group col-3">
                         <label htmlFor="inputText4">Name</label>
-                        <input onChange={handleChange("name")}
-                               value={name} type="text" className="form-control" id="inputText4"/>
+                        <FormFields
+                            inputtype="input"
+                            onChange={handleChange("name")}
+                            value={name}
+                            type="text"
+                            id="inputText4"
+                        />
                     </div>
                 </div>
                 <div className="form-row">
                     <div className="form-group col-3">
                         <label htmlFor="inputEmail4">Email</label>
-                        <input onChange={handleChange("email")}
-                               value={email} type="email" className="form-control" id="inputEmail4"/>
+                        <FormFields
+                            inputtype="input"
+                            onChange={handleChange("email")}
+                            value={email}
+                            type="email"
+                            id="inputEmail4"/>
                     </div>
                 </div>
                 <div className="form-row">
                     <div className="form-group col-3">
                         <label htmlFor="password">Password</label>
-                        <input  onChange={handleChange("password")}
-                                value={password} type="password" className="form-control" id="inputPassword4"/>
+                        <FormFields
+                            inputtype="input"
+                            onChange={handleChange("password")}
+                            value={password}
+                            type="password"
+                            id="inputPassword4"
+                        />
                     </div>
                 </div>
                 <div className="form-row">
@@ -115,12 +131,13 @@ const CreateUser=()=>  {
                             <div className="col-auto my-1">
                                 <label htmlFor="role">Role</label>
                                 <label className="mr-sm-2 sr-only" htmlFor="inlineFormCustomSelect">Preference</label>
-                                <select  value={role} onChange={handleChange("role")} className="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                    <option select="true">Choose...</option>
-                                    <option value="student">Student</option>
-                                    <option value="instructor">Instructor</option>
-                                    <option value="admin">Admin</option>
-                                </select>
+                                <FormFields
+                                    inputtype="select"
+                                    value={role}
+                                    onChange={handleChange("role")}
+                                    className="custom-select mr-sm-2"
+                                    id="inlineFormCustomSelect">
+                                </FormFields>
                             </div>
                         </div>
 

@@ -27,7 +27,7 @@ const UpdateUser=({match})=>  {
                 setValues({...values,error: data.data.error})
             }
             else{
-                setValues({
+                setValues({ 
                     ...values,
                     name:data.data.name,
                     email:data.data.email,
